@@ -1,0 +1,97 @@
+#################################################################################################
+#
+#                                   ╔═════════════════════╗
+#                                   ║    LINEAR ALGEBRA   ║
+#                                   ╚═════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   vec
+#   norm
+#   rank
+#   span 
+#   nullspace
+#   nullity
+#   colspace
+#   rowspace
+#   perp
+#   proj
+#   refl
+#   augmat
+#   bmat
+
+snippet vec "VECTOR NOTATION" iAm
+\vec{$0}$1
+endsnippet
+
+snippet norm "LENGTH / NORM OF VECTOR" iAm
+\Vert $0 \Vert
+endsnippet
+
+snippet rank "RANK OF A MATRIX" iAm
+\text{Rank}($0)$1
+endsnippet
+
+snippet span "SPAN" iAm
+\text{Span}($0)$1
+endsnippet
+
+snippet nullspace "NULL SPACE" iAm
+\text{Null}($0)$1
+endsnippet
+
+snippet nullity "NULLITY" iAm
+\text{Nullity}($0)$1
+endsnippet
+
+snippet colspace "COLUMN SPACE" iAm
+\text{Col}($0)$1
+endsnippet
+
+snippet rowspace "ROW SPACE" iAm
+\text{Row}($0)$1
+endsnippet
+
+snippet perp "PERPENDICULAR PROJECTION" iAm
+\text{perp}_\vec{$0}\vec{$1}
+endsnippet
+
+snippet proj "VECTOR PROJECTION" iAm
+\text{proj}_\vec{$0}\vec{$1}
+endsnippet
+
+snippet refl "VECTOR REFLECTION" iAm
+\text{refl}_\vec{$0}\vec{$1}
+endsnippet
+
+
+
+#####################
+#   ENVIRONMENTS    #
+#####################
+
+snippet augmat "AUGMENTED MATRIX [ccc|c]" iAm
+\left[\begin{array}{ccc|c}
+$0
+\end{array}\right]
+endsnippet
+
+snippet bmat "MATRIX" iAm
+\begin{bmatrix} 
+$0
+\end{bmatrix}
+endsnippet 
+
+snippet pmat "PARANTHESE MATRIX"
+\begin{pmatrix}
+$0
+\end{pmatrix}$1
+endsnippet
+
+snippet cases "CASES" iAm
+\begin{cases}
+$0
+\end{cases}
+endsnippet
+

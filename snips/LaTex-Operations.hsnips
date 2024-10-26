@@ -1,0 +1,61 @@
+#################################################################################################
+#
+#                                  ╔═════════════════════════════╗
+#                                  ║         BASIC MATH          ║
+#                                  ╚═════════════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   sq
+#   cdot
+#   times
+
+snippet sq "SQUARE ROOT"
+\sqrt{$0}$1
+endsnippet
+
+snippet cdot "MULTIPLICATION DOT"
+\cdot
+endsnippet
+
+snippet times "MULTIPLICATION TIMES"
+\times
+endsnippet
+
+
+
+#################################################################################################
+#
+#                                  ╔═════════════════════════════╗
+#                                  ║   SUB AND SUPERSCRIPTS      ║
+#                                  ╚═════════════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   sr
+#   cb
+#   invs
+#   ^
+#   _
+
+snippet `([ ]*)sr` "squared" mAi
+^{2}
+endsnippet
+
+snippet `([ ]*)cb` "cubed" mAi
+^{3}
+endsnippet
+
+snippet `([ ]*)invs` "inverse" mAi
+^{-1}
+endsnippet
+
+snippet ^ "superscript" mAi
+^{$1}$0
+endsnippet
+
+snippet _ "subscript" mAi
+_{$1}$0
+endsnippet

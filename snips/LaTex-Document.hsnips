@@ -1,0 +1,39 @@
+#################################################################################################
+#
+#                                  ╔═══════════════════════╗
+#                                  ║    DOCUMENT DESIGN    ║
+#                                  ╚═══════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   section
+#   subsection
+#   subsubsection
+#   newp
+#   text
+#   bold
+
+snippet section "UNNUMBERED SECTION" iA
+\section*{$0}$1
+endsnippet
+
+snippet subsection "UNNUMBERED SUBSECTION" iA
+\subsection*{$0}$1
+endsnippet
+
+snippet subsubsection "UNNUMBERED SUBSUBSECTION" iA
+\subsubsection*{$0}$1
+endsnippet
+
+snippet newp "NEW PAGE" iA
+\newpage
+endsnippet
+
+snippet text "TEXT" iA
+\text{$0}$1
+endsnippet
+
+snippet bold "BOLD TEXT" iA
+\textbf{$0}$1
+endsnippet

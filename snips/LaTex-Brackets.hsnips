@@ -1,0 +1,36 @@
+#################################################################################################
+#
+#                                  ╔═══════════════════════╗
+#                                  ║       BRACKETS        ║
+#                                  ╚═══════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS: 
+#   abs
+#   lr(
+#   lr|
+#   lr{
+#   lr[
+
+
+snippet abs "ABSOLUTE VALUE" iAm
+\vert $0 \vert $1
+endsnippet
+
+snippet lr( "LARGE BRACES" iAm
+\left( $0 \right) $1
+endsnippet
+
+snippet lr| "LARGE BARS" iAm
+\left\vert $0 \right\vert $1
+endsnippet
+
+snippet lr{ "LARGE CURLY BRACES" iAm
+\left\{ $0 \right\} $1
+endsnippet
+
+snippet lr[ "LARGE SQUARE BRACES" iAm
+\left[ $0 \right] $1
+endsnippet
+

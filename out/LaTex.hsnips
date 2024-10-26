@@ -1,0 +1,437 @@
+#################################################################################################
+#
+#                                  ╔═══════════════════════╗
+#                                  ║       BRACKETS        ║
+#                                  ╚═══════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS: 
+#   abs
+#   lr(
+#   lr|
+#   lr{
+#   lr[
+
+
+snippet abs "ABSOLUTE VALUE" iAm
+\vert $0 \vert $1
+endsnippet
+
+snippet lr( "LARGE BRACES" iAm
+\left( $0 \right) $1
+endsnippet
+
+snippet lr| "LARGE BARS" iAm
+\left\vert $0 \right\vert $1
+endsnippet
+
+snippet lr{ "LARGE CURLY BRACES" iAm
+\left\{ $0 \right\} $1
+endsnippet
+
+snippet lr[ "LARGE SQUARE BRACES" iAm
+\left[ $0 \right] $1
+endsnippet
+
+#################################################################################################
+#
+#                                  ╔═══════════════════════╗
+#                                  ║    DOCUMENT DESIGN    ║
+#                                  ╚═══════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   section
+#   subsection
+#   subsubsection
+#   newp
+#   text
+#   bold
+
+snippet section "UNNUMBERED SECTION" iA
+\section*{$0}$1
+endsnippet
+
+snippet subsection "UNNUMBERED SUBSECTION" iA
+\subsection*{$0}$1
+endsnippet
+
+snippet subsubsection "UNNUMBERED SUBSUBSECTION" iA
+\subsubsection*{$0}$1
+endsnippet
+
+snippet newp "NEW PAGE" iA
+\newpage
+endsnippet
+
+snippet text "TEXT" iA
+\text{$0}$1
+endsnippet
+
+snippet bold "BOLD TEXT" iA
+\textbf{$0}$1
+endsnippet
+#################################################################################################
+#
+#                                   ╔═════════════════════╗
+#                                   ║    LINEAR ALGEBRA   ║
+#                                   ╚═════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   vec
+#   norm
+#   rank
+#   span 
+#   nullspace
+#   nullity
+#   colspace
+#   rowspace
+#   perp
+#   proj
+#   refl
+#   augmat
+#   bmat
+
+snippet vec "VECTOR NOTATION" iAm
+\vec{$0}$1
+endsnippet
+
+snippet norm "LENGTH / NORM OF VECTOR" iAm
+\Vert $0 \Vert
+endsnippet
+
+snippet rank "RANK OF A MATRIX" iAm
+\text{Rank}($0)$1
+endsnippet
+
+snippet span "SPAN" iAm
+\text{Span}($0)$1
+endsnippet
+
+snippet nullspace "NULL SPACE" iAm
+\text{Null}($0)$1
+endsnippet
+
+snippet nullity "NULLITY" iAm
+\text{Nullity}($0)$1
+endsnippet
+
+snippet colspace "COLUMN SPACE" iAm
+\text{Col}($0)$1
+endsnippet
+
+snippet rowspace "ROW SPACE" iAm
+\text{Row}($0)$1
+endsnippet
+
+snippet perp "PERPENDICULAR PROJECTION" iAm
+\text{perp}_\vec{$0}\vec{$1}
+endsnippet
+
+snippet proj "VECTOR PROJECTION" iAm
+\text{proj}_\vec{$0}\vec{$1}
+endsnippet
+
+snippet refl "VECTOR REFLECTION" iAm
+\text{refl}_\vec{$0}\vec{$1}
+endsnippet
+
+
+
+#####################
+#   ENVIRONMENTS    #
+#####################
+
+snippet augmat "AUGMENTED MATRIX [ccc|c]" iAm
+\left[\begin{array}{ccc|c}
+$0
+\end{array}\right]
+endsnippet
+
+snippet bmat "MATRIX" iAm
+\begin{bmatrix} 
+$0
+\end{bmatrix}
+endsnippet 
+
+snippet pmat "PARANTHESE MATRIX"
+\begin{pmatrix}
+$0
+\end{pmatrix}$1
+endsnippet
+
+snippet cases "CASES" iAm
+\begin{cases}
+$0
+\end{cases}
+endsnippet
+
+#################################################################################################
+#
+#                                  ╔═══════════════════════╗
+#                                  ║    PREDICATE LOGIC    ║
+#                                  ╚═══════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   lor
+#   land
+#   lnot
+#   ->
+#   =>
+#   <=> 
+#   forall
+#   exists
+#   argument
+
+#############################
+#    LOGICAL OPERATORS      #
+#############################
+
+snippet lor "LOGICAL OR" iAm
+\lor
+endsnippet
+
+snippet land "LOGICAL AND" iAm
+\land
+endsnippet
+
+snippet lnot "LOGICAL NOT" iAm
+\lnot
+endsnippet
+
+snippet -> "IMPLICATION" iAm
+\rightarrow
+endsnippet
+
+snippet => "LOGICAL IMPLICATION" iAm
+\Rightarrow
+endsnippet
+
+snippet <=> "LOGICAL EQUIVALENCED" iAm
+\Leftrightarrow
+endsnippet
+
+#############################
+#       QUANTIFIERS         #
+#############################
+
+snippet forall "FOR ALL" iAm
+\forall
+endsnippet
+
+snippet exists "THERE EXISTS" iAm
+\exists
+endsnippet
+
+snippet argument "ARGUMENT" iAm
+\displaylines{p → q \\ p \\ \hline \therefore q}
+endsnippet
+
+
+#################################################################################################
+#
+#                                  ╔═══════════════════════╗
+#                                  ║      SET THEORY       ║
+#                                  ╚═══════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   cup 
+#   cap
+#   setdiff
+#   oplus
+#   setb
+
+snippet cup "SET UNION" iAm
+\cup
+endsnippet
+
+snippet cap "SET INTERSECTION" iAm
+\cap
+endsnippet
+
+snippet setdiff "SET DIFFERENCE" iAm
+\setminus
+endsnippet
+
+snippet oplus "SYMMETRIC DIFFERENCE" iAm
+\oplus
+endsnippet
+
+snippet setb "SET BUILDER NOTATION" iAm
+\{$0:$1\}
+endsnippet
+
+#################################################################################################
+#
+#                                   ╔═════════════════════╗
+#                                   ║    NUMBER THEORY    ║
+#                                   ╚═════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   floor
+#   ceil
+#   gcd
+#   lcm
+
+
+snippet floor "FLOOR" iAm
+\lfloor $0 \rfloor $1
+endsnippet
+
+snippet ceil "CEIL" iAm
+\lceil $0 \rceil $1
+endsnippet
+
+snippet gcd "GCD" iAm
+\text{GCD}($0,$1)$2
+endsnippet
+
+snippet lcm "LCM" iAm
+\text{LCM}($0,$1)$2
+endsnippet
+
+
+#################################################################################################
+#
+#                                  ╔═════════════════════════════╗
+#                                  ║         BASIC MATH          ║
+#                                  ╚═════════════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   sq
+#   cdot
+#   times
+
+snippet sq "SQUARE ROOT"
+\sqrt{$0}$1
+endsnippet
+
+snippet cdot "MULTIPLICATION DOT"
+\cdot
+endsnippet
+
+snippet times "MULTIPLICATION TIMES"
+\times
+endsnippet
+
+
+
+#################################################################################################
+#
+#                                  ╔═════════════════════════════╗
+#                                  ║   SUB AND SUPERSCRIPTS      ║
+#                                  ╚═════════════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   sr
+#   cb
+#   invs
+#   ^
+#   _
+
+snippet `([ ]*)sr` "squared" mAi
+^{2}
+endsnippet
+
+snippet `([ ]*)cb` "cubed" mAi
+^{3}
+endsnippet
+
+snippet `([ ]*)invs` "inverse" mAi
+^{-1}
+endsnippet
+
+snippet ^ "superscript" mAi
+^{$1}$0
+endsnippet
+
+snippet _ "subscript" mAi
+_{$1}$0
+endsnippet
+#################################################################################################
+#
+#                                  ╔═════════════════════╗
+#                                  ║     NUMBER SETS     ║
+#                                  ╚═════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   reals
+#   ints
+#   nats
+#   rats
+#   comps
+
+snippet reals "REAL NUMBERS " iAm
+\mathbb{R}
+endsnippet
+
+snippet ints "INTEGERS" iAm
+\mathbb{Z}
+endsnippet
+
+snippet nats "NATURAL NUMBERS" iAm
+\mathbb{N}
+endsnippet
+
+snippet rats "RATIONAL NUMBERS" iAm
+\mathbb{Q}
+endsnippet
+
+snippet comps "COMPLEX NUMBERS" iAm
+\mathbb{C}
+endsnippet
+
+#################################################################################################
+#
+#                                  ╔═════════════════════╗
+#                                  ║    GREEK LETTERS    ║
+#                                  ╚═════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   theta
+
+
+snippet theta "THETA" iAm
+\theta
+endsnippet
+
+
+#################################################################################################
+#
+#                                  ╔═════════════════════╗
+#                                  ║      SET THEORY     ║
+#                                  ╚═════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   mtset
+#   univ
+
+snippet mtset "EMPTY SET" iAm
+\emptyset
+endsnippet
+
+snippet univ "UNIVERSE" iAm
+\mathcal{U}
+endsnippet
+
+

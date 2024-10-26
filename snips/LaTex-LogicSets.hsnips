@@ -1,0 +1,99 @@
+#################################################################################################
+#
+#                                  ╔═══════════════════════╗
+#                                  ║    PREDICATE LOGIC    ║
+#                                  ╚═══════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   lor
+#   land
+#   lnot
+#   ->
+#   =>
+#   <=> 
+#   forall
+#   exists
+#   argument
+
+#############################
+#    LOGICAL OPERATORS      #
+#############################
+
+snippet lor "LOGICAL OR" iAm
+\lor
+endsnippet
+
+snippet land "LOGICAL AND" iAm
+\land
+endsnippet
+
+snippet lnot "LOGICAL NOT" iAm
+\lnot
+endsnippet
+
+snippet -> "IMPLICATION" iAm
+\rightarrow
+endsnippet
+
+snippet => "LOGICAL IMPLICATION" iAm
+\Rightarrow
+endsnippet
+
+snippet <=> "LOGICAL EQUIVALENCED" iAm
+\Leftrightarrow
+endsnippet
+
+#############################
+#       QUANTIFIERS         #
+#############################
+
+snippet forall "FOR ALL" iAm
+\forall
+endsnippet
+
+snippet exists "THERE EXISTS" iAm
+\exists
+endsnippet
+
+snippet argument "ARGUMENT" iAm
+\displaylines{p → q \\ p \\ \hline \therefore q}
+endsnippet
+
+
+#################################################################################################
+#
+#                                  ╔═══════════════════════╗
+#                                  ║      SET THEORY       ║
+#                                  ╚═══════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   cup 
+#   cap
+#   setdiff
+#   oplus
+#   setb
+
+snippet cup "SET UNION" iAm
+\cup
+endsnippet
+
+snippet cap "SET INTERSECTION" iAm
+\cap
+endsnippet
+
+snippet setdiff "SET DIFFERENCE" iAm
+\setminus
+endsnippet
+
+snippet oplus "SYMMETRIC DIFFERENCE" iAm
+\oplus
+endsnippet
+
+snippet setb "SET BUILDER NOTATION" iAm
+\{$0:$1\}
+endsnippet
+

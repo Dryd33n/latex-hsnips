@@ -1,0 +1,32 @@
+#################################################################################################
+#
+#                                   ╔═════════════════════╗
+#                                   ║    NUMBER THEORY    ║
+#                                   ╚═════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   floor
+#   ceil
+#   gcd
+#   lcm
+
+
+snippet floor "FLOOR" iAm
+\lfloor $0 \rfloor $1
+endsnippet
+
+snippet ceil "CEIL" iAm
+\lceil $0 \rceil $1
+endsnippet
+
+snippet gcd "GCD" iAm
+\text{GCD}($0,$1)$2
+endsnippet
+
+snippet lcm "LCM" iAm
+\text{LCM}($0,$1)$2
+endsnippet
+
+

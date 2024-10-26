@@ -1,0 +1,73 @@
+#################################################################################################
+#
+#                                  ╔═════════════════════╗
+#                                  ║     NUMBER SETS     ║
+#                                  ╚═════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   reals
+#   ints
+#   nats
+#   rats
+#   comps
+
+snippet reals "REAL NUMBERS " iAm
+\mathbb{R}
+endsnippet
+
+snippet ints "INTEGERS" iAm
+\mathbb{Z}
+endsnippet
+
+snippet nats "NATURAL NUMBERS" iAm
+\mathbb{N}
+endsnippet
+
+snippet rats "RATIONAL NUMBERS" iAm
+\mathbb{Q}
+endsnippet
+
+snippet comps "COMPLEX NUMBERS" iAm
+\mathbb{C}
+endsnippet
+
+#################################################################################################
+#
+#                                  ╔═════════════════════╗
+#                                  ║    GREEK LETTERS    ║
+#                                  ╚═════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   theta
+
+
+snippet theta "THETA" iAm
+\theta
+endsnippet
+
+
+#################################################################################################
+#
+#                                  ╔═════════════════════╗
+#                                  ║      SET THEORY     ║
+#                                  ╚═════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   mtset
+#   univ
+
+snippet mtset "EMPTY SET" iAm
+\emptyset
+endsnippet
+
+snippet univ "UNIVERSE" iAm
+\mathcal{U}
+endsnippet
+
+
