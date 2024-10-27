@@ -34,7 +34,11 @@ snippet lr[ "LARGE SQUARE BRACES" iAm
 \left[ $0 \right] $1
 endsnippet
 
-#################################################################################################
+
+
+snippet `d([A-Za-z])d([A-Za-z])` "LEIBNIZ NOTATION" iAm
+``rv= "\\frac{d" + m[1] + "}{d" + m[2] + "}"``
+endsnippet#################################################################################################
 #
 #                                  ╔═══════════════════════╗
 #                                  ║    DOCUMENT DESIGN    ║
@@ -73,6 +77,8 @@ endsnippet
 snippet bold "BOLD TEXT" iA
 \textbf{$0}$1
 endsnippet
+
+
 #################################################################################################
 #
 #                                   ╔═════════════════════╗
@@ -95,10 +101,16 @@ endsnippet
 #   refl
 #   augmat
 #   bmat
+#   pmat
+#   cases
 
 snippet vec "VECTOR NOTATION" iAm
 \vec{$0}$1
 endsnippet
+
+snippet `([A-Za-z])hat` iAm
+``rv = '\\hat{' + m[1] + '}'``
+endsnippet 
 
 snippet norm "LENGTH / NORM OF VECTOR" iAm
 \Vert $0 \Vert
@@ -313,6 +325,8 @@ endsnippet
 #   sq
 #   cdot
 #   times
+#   pm
+#   frac
 
 snippet sq "SQUARE ROOT"
 \sqrt{$0}$1
@@ -326,6 +340,13 @@ snippet times "MULTIPLICATION TIMES"
 \times
 endsnippet
 
+snippet frac "FRACTION"
+\frac{$0}{$1}$2
+endsnippet
+
+snippet pm "PLUS OR MINUS"
+\pm
+endsnippet
 
 
 #################################################################################################
@@ -342,16 +363,17 @@ endsnippet
 #   invs
 #   ^
 #   _
+#   [A-Z][0-9] "Auto Subscript"
 
-snippet `([ ]*)sr` "squared" mAi
+snippet sr "squared" mAi
 ^{2}
 endsnippet
 
-snippet `([ ]*)cb` "cubed" mAi
+snippet cb "cubed" mAi
 ^{3}
 endsnippet
 
-snippet `([ ]*)invs` "inverse" mAi
+snippet invs "inverse" mAi
 ^{-1}
 endsnippet
 
@@ -362,7 +384,11 @@ endsnippet
 snippet _ "subscript" mAi
 _{$1}$0
 endsnippet
-#################################################################################################
+
+
+snippet `([A-Za-z])+([0-9])+` "Auto Subscript" iAm
+``rv = m[1] + '_{' + m[2] + '}' ``
+endsnippet#################################################################################################
 #
 #                                  ╔═════════════════════╗
 #                                  ║     NUMBER SETS     ║
@@ -435,3 +461,80 @@ snippet univ "UNIVERSE" iAm
 endsnippet
 
 
+#################################################################################################
+#
+#                                  ╔═════════════════════╗
+#                                  ║   TRIG FUNCTIONS    ║
+#                                  ╚═════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   sin
+#   cos
+#   tan
+#   cot
+#   sec
+#   csc
+#   asin
+#   acos
+#   atan
+#   acot
+#   asec
+#   acsc
+
+#####################
+#  TRIG FUNCTIONS   #
+#####################
+
+snippet sin "SIN" Am
+\sin($1)$2
+endsnippet
+
+snippet cos "COSINE" Am
+\cos($1)$2
+endsnippet
+
+snippet tan "TANGENT" Am
+\tan($1)$2
+endsnippet
+
+snippet cot "COTANGENT" Am
+\cot($1)$2
+endsnippet
+
+snippet sec "SECANT" Am
+\sec($1)$2
+endsnippet
+
+snippet csc "COSECANT" Am
+\csc($1)$2
+endsnippet
+
+#############################
+#  INVERSE TRIG FUNCTIONS   #
+#############################
+
+snippet asin "ARCSINE" iAm
+\arcsine($1)$2
+endsnippet
+
+snippet acos "ARCOSINE" iAm
+\arccos($1)$2
+endsnippet
+
+snippet atan "ARCTANGENT" iAm
+\arctan($1)$2
+endsnippet
+
+snippet acot "ARCCOTANGENT" iAm
+\text{arccot}($1)$2
+endsnippet
+
+snippet asec "ARCSECANT" iAm
+\text{arcsec}($1)$2
+endsnippet
+
+snippet acsc "ARCCOSECANT" iAm
+\text{arcscs}($1)$2
+endsnippet

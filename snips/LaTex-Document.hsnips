@@ -37,3 +37,5 @@ endsnippet
 snippet bold "BOLD TEXT" iA
 \textbf{$0}$1
 endsnippet
+
+

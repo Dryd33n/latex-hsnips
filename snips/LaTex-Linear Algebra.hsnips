@@ -20,10 +20,16 @@
 #   refl
 #   augmat
 #   bmat
+#   pmat
+#   cases
 
 snippet vec "VECTOR NOTATION" iAm
 \vec{$0}$1
 endsnippet
+
+snippet `([A-Za-z])hat` iAm
+``rv = '\\hat{' + m[1] + '}'``
+endsnippet 
 
 snippet norm "LENGTH / NORM OF VECTOR" iAm
 \Vert $0 \Vert

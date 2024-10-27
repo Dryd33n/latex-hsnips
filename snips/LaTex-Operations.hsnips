@@ -10,6 +10,8 @@
 #   sq
 #   cdot
 #   times
+#   pm
+#   frac
 
 snippet sq "SQUARE ROOT"
 \sqrt{$0}$1
@@ -23,6 +25,13 @@ snippet times "MULTIPLICATION TIMES"
 \times
 endsnippet
 
+snippet frac "FRACTION"
+\frac{$0}{$1}$2
+endsnippet
+
+snippet pm "PLUS OR MINUS"
+\pm
+endsnippet
 
 
 #################################################################################################
@@ -39,16 +48,17 @@ endsnippet
 #   invs
 #   ^
 #   _
+#   [A-Z][0-9] "Auto Subscript"
 
-snippet `([ ]*)sr` "squared" mAi
+snippet sr "squared" mAi
 ^{2}
 endsnippet
 
-snippet `([ ]*)cb` "cubed" mAi
+snippet cb "cubed" mAi
 ^{3}
 endsnippet
 
-snippet `([ ]*)invs` "inverse" mAi
+snippet invs "inverse" mAi
 ^{-1}
 endsnippet
 
@@ -58,4 +68,9 @@ endsnippet
 
 snippet _ "subscript" mAi
 _{$1}$0
+endsnippet
+
+
+snippet `([A-Za-z])+([0-9])+` "Auto Subscript" iAm
+``rv = m[1] + '_{' + m[2] + '}' ``
 endsnippet

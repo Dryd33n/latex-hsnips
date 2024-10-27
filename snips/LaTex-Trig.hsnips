@@ -1,0 +1,77 @@
+#################################################################################################
+#
+#                                  ╔═════════════════════╗
+#                                  ║   TRIG FUNCTIONS    ║
+#                                  ╚═════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   sin
+#   cos
+#   tan
+#   cot
+#   sec
+#   csc
+#   asin
+#   acos
+#   atan
+#   acot
+#   asec
+#   acsc
+
+#####################
+#  TRIG FUNCTIONS   #
+#####################
+
+snippet sin "SIN" Am
+\sin($1)$2
+endsnippet
+
+snippet cos "COSINE" Am
+\cos($1)$2
+endsnippet
+
+snippet tan "TANGENT" Am
+\tan($1)$2
+endsnippet
+
+snippet cot "COTANGENT" Am
+\cot($1)$2
+endsnippet
+
+snippet sec "SECANT" Am
+\sec($1)$2
+endsnippet
+
+snippet csc "COSECANT" Am
+\csc($1)$2
+endsnippet
+
+#############################
+#  INVERSE TRIG FUNCTIONS   #
+#############################
+
+snippet asin "ARCSINE" iAm
+\arcsine($1)$2
+endsnippet
+
+snippet acos "ARCOSINE" iAm
+\arccos($1)$2
+endsnippet
+
+snippet atan "ARCTANGENT" iAm
+\arctan($1)$2
+endsnippet
+
+snippet acot "ARCCOTANGENT" iAm
+\text{arccot}($1)$2
+endsnippet
+
+snippet asec "ARCSECANT" iAm
+\text{arcsec}($1)$2
+endsnippet
+
+snippet acsc "ARCCOSECANT" iAm
+\text{arcscs}($1)$2
+endsnippet
