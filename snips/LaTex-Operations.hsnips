@@ -71,6 +71,6 @@ _{$1}$0
 endsnippet
 
 
-snippet `([A-Za-z])+([0-9])+` "Auto Subscript" iAm
+snippet `([A-Za-z])(\d)` "Auto Subscript" iAm
 ``rv = m[1] + '_{' + m[2] + '}' ``
 endsnippet

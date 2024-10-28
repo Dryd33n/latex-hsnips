@@ -8,6 +8,7 @@
 #
 #   SNIPPETS:
 #   vec
+#   'vec'hat
 #   norm
 #   rank
 #   span 
@@ -27,7 +28,7 @@ snippet vec "VECTOR NOTATION" iAm
 \vec{$0}$1
 endsnippet
 
-snippet `([A-Za-z])hat` iAm
+snippet `([A-Za-z])hat` "HAT NOTATION" iAm
 ``rv = '\\hat{' + m[1] + '}'``
 endsnippet 
 

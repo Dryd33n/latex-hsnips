@@ -5,4 +5,5 @@ output_file="out/LaTex.hsnips"
 
 for file in snips/*; do
     cat "$file" >> "$output_file"
+    echo "" >> "$output_file"
 done

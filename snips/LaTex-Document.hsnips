@@ -13,17 +13,19 @@
 #   newp
 #   text
 #   bold
+#   und
+#   table;numcols;numrows
 
 snippet section "UNNUMBERED SECTION" iA
-\section*{$0}$1
+\section*{$1}$2
 endsnippet
 
 snippet subsection "UNNUMBERED SUBSECTION" iA
-\subsection*{$0}$1
+\subsection*{$1}$2
 endsnippet
 
 snippet subsubsection "UNNUMBERED SUBSUBSECTION" iA
-\subsubsection*{$0}$1
+\subsubsection*{$1}$2
 endsnippet
 
 snippet newp "NEW PAGE" iA
@@ -31,11 +33,25 @@ snippet newp "NEW PAGE" iA
 endsnippet
 
 snippet text "TEXT" iA
-\text{$0}$1
+\text{$1}$2
 endsnippet
 
 snippet bold "BOLD TEXT" iA
-\textbf{$0}$1
+\textbf{$1}$2
 endsnippet
 
+snippet und "UNDERLINE" iA
+\underline{$1}$2
+endsnippet
+
+snippet `table;(\d);(\d)` "INSERT TABLE" iA
+`` rv = `\\begin{table}[htp]
+     \\centering
+     \\begin{tabular}{`+'c'.repeat(m[1])+'}\n'
+     let line = ('   '+'&   '.repeat(m[1]-1) + '\\'+ '\\'+'\\'+'\n')
+     rv += line.repeat(m[2]) 
+     rv += `\\end{tabular}
+    \\end{table}` 
+``
+endsnippet
 
