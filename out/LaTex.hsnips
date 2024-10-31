@@ -53,7 +53,7 @@ endsnippet
 
 
 snippet `d([A-Za-z])d([A-Za-z])` "LEIBNIZ NOTATION" iAm
-``rv= "\\frac{d" + m[1] + "}{d" + m[2] + "}"``
+``rv= "\\frac{d" + m[0] + "}{d" + m[2] + "}"``
 endsnippet
 #################################################################################################
 #
@@ -72,6 +72,7 @@ endsnippet
 #   bold
 #   und
 #   table;numcols;numrows
+#   articletemplate
 
 snippet section "UNNUMBERED SECTION" iA
 \section*{$1}$2
@@ -110,6 +111,22 @@ snippet `table;(\d);(\d)` "INSERT TABLE" iA
      rv += `\\end{tabular}
     \\end{table}` 
 ``
+endsnippet
+
+snippet articletemplate "ARTICLE TEMPLATE" iA
+\documentclass{article}
+\usepackage[legalpaper, portrait, margin=0.5in]{geometry}
+
+\title{$1}
+\author{$2}
+\date{$3}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\end{document}
 endsnippet
 
 
@@ -366,24 +383,33 @@ endsnippet
 #   pm
 #   frac
 
-snippet sq "SQUARE ROOT"
+snippet sq "SQUARE ROOT" mAi
 \sqrt{$0}$1
 endsnippet
 
-snippet cdot "MULTIPLICATION DOT"
-\cdot
+snippet cdot "MULTIPLICATION DOT" mAi
+\cdot $1
 endsnippet
 
-snippet times "MULTIPLICATION TIMES"
-\times
+snippet times "MULTIPLICATION TIMES" mAi
+\times $1
 endsnippet
 
-snippet frac "FRACTION"
+snippet frac "FRACTION" mAi
 \frac{$0}{$1}$2
 endsnippet
 
-snippet pm "PLUS OR MINUS"
+snippet pm "PLUS OR MINUS" mAi
 \pm
+endsnippet
+
+snippet `;(\d{1,2})+FacExpand` "Factorial Expansions" mAi
+``
+rv = m[1]
+for(let i = m[1]-1; i > 1; i--){
+    rv += " \\times" + i
+    }
+``
 endsnippet
 
 
@@ -427,6 +453,38 @@ endsnippet
 snippet `([A-Za-z])(\d)` "Auto Subscript" iAm
 ``rv = m[1] + '_{' + m[2] + '}' ``
 endsnippet
+
+
+#################################################################################################
+#
+#                                  ╔═════════════════════════════╗
+#                                  ║        ENVIRONMENTS         ║
+#                                  ╚═════════════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#
+#   align
+#   aligned
+
+snippet align "ALIGN ENVIRONMENT" iAm
+\begin{align}
+    $1
+\end{align}
+endsnippet
+
+snippet aligned "ALIGN ENVIRONMENT" iAm
+\begin{aligned}
+    $1
+\end{aligned}
+endsnippet
+
+snippet begin "BEGIN ENVIRONMENT" iA
+\begin{$1}
+$2
+\end{$1}
+endsnippet  
 #################################################################################################
 #
 #                                  ╔═════════════════════╗

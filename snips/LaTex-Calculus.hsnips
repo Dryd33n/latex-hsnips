@@ -16,5 +16,5 @@
 
 
 snippet `d([A-Za-z])d([A-Za-z])` "LEIBNIZ NOTATION" iAm
-``rv= "\\frac{d" + m[1] + "}{d" + m[2] + "}"``
+``rv= "\\frac{d" + m[0] + "}{d" + m[2] + "}"``
 endsnippet

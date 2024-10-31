@@ -15,6 +15,7 @@
 #   bold
 #   und
 #   table;numcols;numrows
+#   articletemplate
 
 snippet section "UNNUMBERED SECTION" iA
 \section*{$1}$2
@@ -53,5 +54,21 @@ snippet `table;(\d);(\d)` "INSERT TABLE" iA
      rv += `\\end{tabular}
     \\end{table}` 
 ``
+endsnippet
+
+snippet articletemplate "ARTICLE TEMPLATE" iA
+\documentclass{article}
+\usepackage[legalpaper, portrait, margin=0.5in]{geometry}
+
+\title{$1}
+\author{$2}
+\date{$3}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\end{document}
 endsnippet
 
