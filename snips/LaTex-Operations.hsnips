@@ -14,7 +14,7 @@
 #   frac
 
 snippet sq "SQUARE ROOT" mAi
-\sqrt{$0}$1
+\sqrt{$1}$2
 endsnippet
 
 snippet cdot "MULTIPLICATION DOT" mAi
@@ -26,7 +26,7 @@ snippet times "MULTIPLICATION TIMES" mAi
 endsnippet
 
 snippet frac "FRACTION" mAi
-\frac{$0}{$1}$2
+\frac{$1}{$2}$3
 endsnippet
 
 snippet pm "PLUS OR MINUS" mAi

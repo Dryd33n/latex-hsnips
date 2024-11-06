@@ -94,6 +94,6 @@ snippet oplus "SYMMETRIC DIFFERENCE" iAm
 endsnippet
 
 snippet setb "SET BUILDER NOTATION" iAm
-\{$0:$1\}
+\{$1:$2\}
 endsnippet
 

@@ -33,43 +33,43 @@ snippet `([A-Za-z])hat` "HAT NOTATION" iAm
 endsnippet 
 
 snippet norm "LENGTH / NORM OF VECTOR" iAm
-\Vert $0 \Vert
+\Vert $1 \Vert
 endsnippet
 
 snippet rank "RANK OF A MATRIX" iAm
-\text{Rank}($0)$1
+\text{Rank}($1)$2
 endsnippet
 
 snippet span "SPAN" iAm
-\text{Span}($0)$1
+\text{Span}($1)$2
 endsnippet
 
 snippet nullspace "NULL SPACE" iAm
-\text{Null}($0)$1
+\text{Null}($1)$2
 endsnippet
 
 snippet nullity "NULLITY" iAm
-\text{Nullity}($0)$1
+\text{Nullity}($1)$2
 endsnippet
 
 snippet colspace "COLUMN SPACE" iAm
-\text{Col}($0)$1
+\text{Col}($1)$2
 endsnippet
 
 snippet rowspace "ROW SPACE" iAm
-\text{Row}($0)$1
+\text{Row}($1)$2
 endsnippet
 
 snippet perp "PERPENDICULAR PROJECTION" iAm
-\text{perp}_\vec{$0}\vec{$1}
+\text{perp}_\vec{$1}\vec{$2}
 endsnippet
 
 snippet proj "VECTOR PROJECTION" iAm
-\text{proj}_\vec{$0}\vec{$1}
+\text{proj}_\vec{$1}\vec{$2}
 endsnippet
 
 snippet refl "VECTOR REFLECTION" iAm
-\text{refl}_\vec{$0}\vec{$1}
+\text{refl}_\vec{$1}\vec{$2}
 endsnippet
 
 
@@ -80,25 +80,25 @@ endsnippet
 
 snippet augmat "AUGMENTED MATRIX [ccc|c]" iAm
 \left[\begin{array}{ccc|c}
-$0
+$1
 \end{array}\right]
 endsnippet
 
 snippet bmat "MATRIX" iAm
 \begin{bmatrix} 
-$0
+$1
 \end{bmatrix}
 endsnippet 
 
 snippet pmat "PARANTHESE MATRIX"
 \begin{pmatrix}
-$0
+$1
 \end{pmatrix}$1
 endsnippet
 
 snippet cases "CASES" iAm
 \begin{cases}
-$0
+$1
 \end{cases}
 endsnippet
 

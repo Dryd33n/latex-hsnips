@@ -14,19 +14,19 @@
 
 
 snippet floor "FLOOR" iAm
-\lfloor $0 \rfloor $1
+\lfloor $1 \rfloor $2
 endsnippet
 
 snippet ceil "CEIL" iAm
-\lceil $0 \rceil $1
+\lceil $1 \rceil $2
 endsnippet
 
 snippet gcd "GCD" iAm
-\text{GCD}($0,$1)$2
+\text{GCD}($1,$2)$3
 endsnippet
 
 snippet lcm "LCM" iAm
-\text{LCM}($0,$1)$2
+\text{LCM}($1,$2)$3
 endsnippet
 
 
