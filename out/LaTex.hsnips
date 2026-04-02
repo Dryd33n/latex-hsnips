@@ -64,13 +64,15 @@ snippet `2p([A-Za-z])p([A-Za-z])` "SECONDPARTIAL DERIVATIVE" iAm
 ``rv= "\\frac{\\partial^{2} " + m[1] + "}{\\partial " + m[2] + "^{2}}"``
 endsnippet
 
-snippet `laplace` "Laplace Transform" iAm
-\mathcal{L}\{$1 \\}
+snippet `ilaplace` "Inverse Laplace Transform" iAm
+\mathcal{L}^{-1}\left{$1\right}
 endsnippet
 
-snippet `ilaplace` "Inverse Laplace Transform" iAm
-\mathcal{L}^{-1}\{$1\}
+
+snippet `laplace` "Laplace Transform" iAm
+\mathcal{L}\left\{$1\\right\\}
 endsnippet
+
 
 #################################################################################################
 #
@@ -107,12 +109,18 @@ snippet newp "NEW PAGE" iA
 \newpage
 endsnippet
 
-snippet text "TEXT" iA
-\text{$1}$2
+
+
+snippet `i"` "ITALIC TEXT" iA
+\textit{$1}$2
 endsnippet
 
-snippet bold "BOLD TEXT" iA
+snippet `b"` "BOLD TEXT" iA
 \textbf{$1}$2
+endsnippet
+
+snippet `"` "TEXT" iA
+\text{$1}$2
 endsnippet
 
 snippet und "UNDERLINE" iA

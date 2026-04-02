@@ -33,12 +33,18 @@ snippet newp "NEW PAGE" iA
 \newpage
 endsnippet
 
-snippet text "TEXT" iA
-\text{$1}$2
+
+
+snippet `i"` "ITALIC TEXT" iA
+\textit{$1}$2
 endsnippet
 
-snippet bold "BOLD TEXT" iA
+snippet `b"` "BOLD TEXT" iA
 \textbf{$1}$2
+endsnippet
+
+snippet `"` "TEXT" iA
+\text{$1}$2
 endsnippet
 
 snippet und "UNDERLINE" iA
