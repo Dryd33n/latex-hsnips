@@ -44,17 +44,34 @@ endsnippet
 #################################################################################################
 #
 #   SNIPPETS: 
-#   d[A-Z]d[A-Z] "Leibniz Derivative"
-#
-#
-#
+#   d[A-Z]d[A-Z]  "Leibniz Derivative"
+#	p[A-Z]p[A-Z]  "Partial Derivative"
+#   2p[A-Z]p[A-Z] "Second Partial Derivative"
+#	laplace       "Laplace Transform"
 #
 #
 
 
 snippet `d([A-Za-z])d([A-Za-z])` "LEIBNIZ NOTATION" iAm
-``rv= "\\frac{d" + m[0] + "}{d" + m[2] + "}"``
+``rv= "\\frac{d" + m[1] + "}{d" + m[2] + "}"``
 endsnippet
+
+snippet `(?<!\d)p([A-Za-z])p([A-Za-z])` "PARTIAL DERIVATIVE" iAm
+``rv= "\\frac{\\partial " + m[1] + "}{\\partial " + m[2] + "}"``
+endsnippet
+
+snippet `2p([A-Za-z])p([A-Za-z])` "SECONDPARTIAL DERIVATIVE" iAm
+``rv= "\\frac{\\partial^{2} " + m[1] + "}{\\partial " + m[2] + "^{2}}"``
+endsnippet
+
+snippet `laplace` "Laplace Transform" iAm
+\mathcal{L}\{$1 \\}
+endsnippet
+
+snippet `ilaplace` "Inverse Laplace Transform" iAm
+\mathcal{L}^{-1}\{$1\}
+endsnippet
+
 #################################################################################################
 #
 #                                  ╔═══════════════════════╗
@@ -109,13 +126,16 @@ snippet `table;(\d);(\d)` "INSERT TABLE" iA
      let line = ('   '+'&   '.repeat(m[1]-1) + '\\'+ '\\'+'\\'+'\n')
      rv += line.repeat(m[2]) 
      rv += `\\end{tabular}
-    \\end{table}` 
+    \\end{table}\\\\\\\\` 
 ``
 endsnippet
 
 snippet articletemplate "ARTICLE TEMPLATE" iA
 \documentclass{article}
 \usepackage[legalpaper, portrait, margin=0.5in]{geometry}
+\usepackage {amsmath}
+\usepackage {amssymb}
+\usepackage {enumerate}
 
 \title{$1}
 \author{$2}
@@ -129,7 +149,43 @@ snippet articletemplate "ARTICLE TEMPLATE" iA
 \end{document}
 endsnippet
 
+#################################################################################################
+#
+#                                  ╔═══════════════════════╗
+#                                  ║         LISTS         ║
+#                                  ╚═══════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   blist (bulleted point list)
+#   nlist (numbered list)
+#   ilist (roman numeral list lower case)
+#   Ilist (roman numeral list upper case)
 
+snippet blist "BULLET POINT LIST" iA
+\begin{itemize}
+	\item $1
+\end{itemize}
+endsnippet
+
+snippet nlist "NUMBERED LIST" iA
+\begin{enumerate}
+	\item $1
+\end{enumerate}
+endsnippet
+
+snippet ilist "ROMAN NUMERAL LOWERCASE LIST" iA
+\begin{enumerate}[i]
+	\item $1
+\end{enumerate}
+endsnippet
+
+snippet Ilist "ROMAN NUMERAL UPPERCASE LIST" iA
+\begin{enumerate}[I]
+	\item $1
+\end{enumerate}
+endsnippet
 #################################################################################################
 #
 #                                   ╔═════════════════════╗
@@ -141,6 +197,7 @@ endsnippet
 #   SNIPPETS:
 #   vec
 #   'vec'hat
+#   bar
 #   norm
 #   rank
 #   span 
@@ -156,12 +213,16 @@ endsnippet
 #   pmat
 #   cases
 
-snippet vec "VECTOR NOTATION" iAm
-\vec{$0}$1
-endsnippet
+snippet `([A-Za-z])vec` "VEC NOTATION" iAm
+``rv = '\\vec{' + m[1] + '}'``
+endsnippet 
 
 snippet `([A-Za-z])hat` "HAT NOTATION" iAm
 ``rv = '\\hat{' + m[1] + '}'``
+endsnippet 
+
+snippet `([A-Za-z])bar` "BAR NOTATION" iAm
+``rv = '\\bar{' + m[1] + '}'``
 endsnippet 
 
 snippet norm "LENGTH / NORM OF VECTOR" iAm
@@ -308,11 +369,15 @@ endsnippet
 #################################################################################################
 #
 #   SNIPPETS:
+#   inn
 #   cup 
 #   cap
 #   setdiff
-#   oplus
 #   setb
+
+snippet inn "SET MEMBERSHIP" iAm
+\in
+endsnippet
 
 snippet cup "SET UNION" iAm
 \cup
@@ -324,10 +389,6 @@ endsnippet
 
 snippet setdiff "SET DIFFERENCE" iAm
 \setminus
-endsnippet
-
-snippet oplus "SYMMETRIC DIFFERENCE" iAm
-\oplus
 endsnippet
 
 snippet setb "SET BUILDER NOTATION" iAm
@@ -382,6 +443,10 @@ endsnippet
 #   times
 #   pm
 #   frac
+#   ;numFacExpand
+#   odot
+#   oplus
+#   1o             
 
 snippet sq "SQUARE ROOT" mAi
 \sqrt{$1}$2
@@ -410,6 +475,14 @@ for(let i = m[1]-1; i > 1; i--){
     rv += " \\times" + i
     }
 ``
+endsnippet
+
+snippet odot "O DOT" iAm
+\odot
+endsnippet
+
+snippet oplus "O PLUS" iAm
+\oplus
 endsnippet
 
 
@@ -485,6 +558,10 @@ snippet begin "BEGIN ENVIRONMENT" iA
 $2
 \end{$1}
 endsnippet  
+
+snippet `1o` "Fraction 1 over" iAm
+\frac{1}{$1}
+endsnippet
 #################################################################################################
 #
 #                                  ╔═════════════════════╗
@@ -494,11 +571,22 @@ endsnippet
 #################################################################################################
 #
 #   SNIPPETS:
+#   mbb
 #   reals
 #   ints
 #   nats
 #   rats
 #   comps
+#   RR
+#   ZZ
+#   NN
+#   QQ
+#   CC
+#   VV
+
+snippet mbb "MATHBB FONT" iAm
+\mathbb{$1}$2
+endsnippet
 
 snippet reals "REAL NUMBERS " iAm
 \mathbb{R}
@@ -519,6 +607,31 @@ endsnippet
 snippet comps "COMPLEX NUMBERS" iAm
 \mathbb{C}
 endsnippet
+
+snippet RR "REAL NUMBERS " iAm
+\mathbb{R}
+endsnippet
+
+snippet ZZ "INTEGERS" iAm
+\mathbb{Z}
+endsnippet
+
+snippet NN "NATURAL NUMBERS" iAm
+\mathbb{N}
+endsnippet
+
+snippet QQ "RATIONAL NUMBERS" iAm
+\mathbb{Q}
+endsnippet
+
+snippet CC "COMPLEX NUMBERS" iAm
+\mathbb{C}
+endsnippet
+
+snippet VV "VECTOR SPACE" iAm
+\mathbb{V}
+endsnippet
+
 
 #################################################################################################
 #
@@ -636,3 +749,147 @@ endsnippet
 snippet acsc "ARCCOSECANT" iAm
 \text{arcscs}($1)$2
 endsnippet
+snippet alpha "alpha" iAm
+\alpha
+endsnippet
+
+snippet beta "beta" iAm
+\beta
+endsnippet
+
+snippet gamma "gamma" iAm
+\gamma
+endsnippet
+
+snippet Gamma "Gamma" iAm
+\Gamma
+endsnippet
+
+snippet delta "delta" iAm
+\delta
+endsnippet
+
+snippet Delta "Delta" iAm
+\Delta
+endsnippet
+
+snippet epsilon "epsilon" iAm
+\epsilon
+endsnippet
+
+snippet varepsilon "varepsilon" iAm
+\varepsilon
+endsnippet
+
+snippet zeta "zeta" iAm
+\zeta
+endsnippet
+
+snippet eta "eta" iAm
+\eta
+endsnippet
+
+snippet theta "theta" iAm
+\theta
+endsnippet
+
+snippet vartheta "vartheta" iAm
+\vartheta
+endsnippet
+
+snippet Theta "Theta" iAm
+\Theta
+endsnippet
+
+snippet iota "iota" iAm
+\iota
+endsnippet
+
+snippet kappa "kappa" iAm
+\kappa
+endsnippet
+
+snippet lambda "lambda" iAm
+\lambda
+endsnippet
+
+snippet Lambda "Lambda" iAm
+\Lambda
+endsnippet
+
+snippet mu "mu" iAm
+\mu
+endsnippet
+
+snippet nu "nu" iAm
+\nu
+endsnippet
+
+snippet xi "xi" iAm
+\xi
+endsnippet
+
+snippet omicron "omicron" iAm
+\omicron
+endsnippet
+
+snippet pi "pi" iAm
+\pi
+endsnippet
+
+snippet rho "rho" iAm
+\rho
+endsnippet
+
+snippet varrho "varrho" iAm
+\varrho
+endsnippet
+
+snippet sigma "sigma" iAm
+\sigma
+endsnippet
+
+snippet Sigma "Sigma" iAm
+\Sigma
+endsnippet
+
+snippet tau "tau" iAm
+\tau
+endsnippet
+
+snippet upsilon "upsilon" iAm
+\upsilon
+endsnippet
+
+snippet Upsilon "Upsilon" iAm
+\Upsilon
+endsnippet
+
+snippet phi "phi" iAm
+\phi
+endsnippet
+
+snippet varphi "varphi" iAm
+\varphi
+endsnippet
+
+snippet Phi "Phi" iAm
+\Phi
+endsnippet
+
+snippet chi "chi" iAm
+\chi
+endsnippet
+
+snippet psi "psi" iAm
+\psi
+endsnippet
+
+snippet omega "omega" iAm
+\omega
+endsnippet
+
+snippet Omega "Omega" iAm
+\Omega
+endsnippet
+

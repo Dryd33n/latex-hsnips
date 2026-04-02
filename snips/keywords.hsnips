@@ -1,3 +1,40 @@
 # Keywords — one per line, comments start with #
 # Each keyword becomes a snippet that expands to \<keyword>
 
+# Greek letters
+alpha
+beta
+gamma
+Gamma
+delta
+Delta
+epsilon
+varepsilon
+zeta
+eta
+theta
+vartheta
+Theta
+iota
+kappa
+lambda
+Lambda
+mu
+nu
+xi
+omicron
+pi
+rho
+varrho
+sigma
+Sigma
+tau
+upsilon
+Upsilon
+phi
+varphi
+Phi
+chi
+psi
+omega
+Omega
