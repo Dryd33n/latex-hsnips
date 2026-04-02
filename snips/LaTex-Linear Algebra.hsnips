@@ -9,6 +9,7 @@
 #   SNIPPETS:
 #   vec
 #   'vec'hat
+#   bar
 #   norm
 #   rank
 #   span 
@@ -24,12 +25,16 @@
 #   pmat
 #   cases
 
-snippet vec "VECTOR NOTATION" iAm
-\vec{$0}$1
-endsnippet
+snippet `([A-Za-z])vec` "VEC NOTATION" iAm
+``rv = '\\vec{' + m[1] + '}'``
+endsnippet 
 
 snippet `([A-Za-z])hat` "HAT NOTATION" iAm
 ``rv = '\\hat{' + m[1] + '}'``
+endsnippet 
+
+snippet `([A-Za-z])bar` "BAR NOTATION" iAm
+``rv = '\\bar{' + m[1] + '}'``
 endsnippet 
 
 snippet norm "LENGTH / NORM OF VECTOR" iAm

@@ -52,13 +52,16 @@ snippet `table;(\d);(\d)` "INSERT TABLE" iA
      let line = ('   '+'&   '.repeat(m[1]-1) + '\\'+ '\\'+'\\'+'\n')
      rv += line.repeat(m[2]) 
      rv += `\\end{tabular}
-    \\end{table}` 
+    \\end{table}\\\\\\\\` 
 ``
 endsnippet
 
 snippet articletemplate "ARTICLE TEMPLATE" iA
 \documentclass{article}
 \usepackage[legalpaper, portrait, margin=0.5in]{geometry}
+\usepackage {amsmath}
+\usepackage {amssymb}
+\usepackage {enumerate}
 
 \title{$1}
 \author{$2}
@@ -72,3 +75,40 @@ snippet articletemplate "ARTICLE TEMPLATE" iA
 \end{document}
 endsnippet
 
+#################################################################################################
+#
+#                                  ╔═══════════════════════╗
+#                                  ║         LISTS         ║
+#                                  ╚═══════════════════════╝
+#
+#################################################################################################
+#
+#   SNIPPETS:
+#   blist (bulleted point list)
+#   nlist (numbered list)
+#   ilist (roman numeral list lower case)
+#   Ilist (roman numeral list upper case)
+
+snippet blist "BULLET POINT LIST" iA
+\begin{itemize}
+	\item $1
+\end{itemize}
+endsnippet
+
+snippet nlist "NUMBERED LIST" iA
+\begin{enumerate}
+	\item $1
+\end{enumerate}
+endsnippet
+
+snippet ilist "ROMAN NUMERAL LOWERCASE LIST" iA
+\begin{enumerate}[i]
+	\item $1
+\end{enumerate}
+endsnippet
+
+snippet Ilist "ROMAN NUMERAL UPPERCASE LIST" iA
+\begin{enumerate}[I]
+	\item $1
+\end{enumerate}
+endsnippet

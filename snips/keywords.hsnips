@@ -1,0 +1,3 @@
+# Keywords — one per line, comments start with #
+# Each keyword becomes a snippet that expands to \<keyword>
+

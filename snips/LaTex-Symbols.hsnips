@@ -7,11 +7,22 @@
 #################################################################################################
 #
 #   SNIPPETS:
+#   mbb
 #   reals
 #   ints
 #   nats
 #   rats
 #   comps
+#   RR
+#   ZZ
+#   NN
+#   QQ
+#   CC
+#   VV
+
+snippet mbb "MATHBB FONT" iAm
+\mathbb{$1}$2
+endsnippet
 
 snippet reals "REAL NUMBERS " iAm
 \mathbb{R}
@@ -32,6 +43,31 @@ endsnippet
 snippet comps "COMPLEX NUMBERS" iAm
 \mathbb{C}
 endsnippet
+
+snippet RR "REAL NUMBERS " iAm
+\mathbb{R}
+endsnippet
+
+snippet ZZ "INTEGERS" iAm
+\mathbb{Z}
+endsnippet
+
+snippet NN "NATURAL NUMBERS" iAm
+\mathbb{N}
+endsnippet
+
+snippet QQ "RATIONAL NUMBERS" iAm
+\mathbb{Q}
+endsnippet
+
+snippet CC "COMPLEX NUMBERS" iAm
+\mathbb{C}
+endsnippet
+
+snippet VV "VECTOR SPACE" iAm
+\mathbb{V}
+endsnippet
+
 
 #################################################################################################
 #

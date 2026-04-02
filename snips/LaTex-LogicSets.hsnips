@@ -71,11 +71,15 @@ endsnippet
 #################################################################################################
 #
 #   SNIPPETS:
+#   inn
 #   cup 
 #   cap
 #   setdiff
-#   oplus
 #   setb
+
+snippet inn "SET MEMBERSHIP" iAm
+\in
+endsnippet
 
 snippet cup "SET UNION" iAm
 \cup
@@ -87,10 +91,6 @@ endsnippet
 
 snippet setdiff "SET DIFFERENCE" iAm
 \setminus
-endsnippet
-
-snippet oplus "SYMMETRIC DIFFERENCE" iAm
-\oplus
 endsnippet
 
 snippet setb "SET BUILDER NOTATION" iAm

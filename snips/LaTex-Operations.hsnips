@@ -12,6 +12,10 @@
 #   times
 #   pm
 #   frac
+#   ;numFacExpand
+#   odot
+#   oplus
+#   1o             
 
 snippet sq "SQUARE ROOT" mAi
 \sqrt{$1}$2
@@ -40,6 +44,14 @@ for(let i = m[1]-1; i > 1; i--){
     rv += " \\times" + i
     }
 ``
+endsnippet
+
+snippet odot "O DOT" iAm
+\odot
+endsnippet
+
+snippet oplus "O PLUS" iAm
+\oplus
 endsnippet
 
 
@@ -115,3 +127,7 @@ snippet begin "BEGIN ENVIRONMENT" iA
 $2
 \end{$1}
 endsnippet  
+
+snippet `1o` "Fraction 1 over" iAm
+\frac{1}{$1}
+endsnippet
